@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-# Line 1 adds shebang to make it work like a shell script 
 import argparse
-from pathlib import Path # class is pathlib, Path is data type
+
+from pathlib import Path 
 
 def main():
     parser = argparse.ArgumentParser(description="This program uses A* to create the optimal path for a car") 
