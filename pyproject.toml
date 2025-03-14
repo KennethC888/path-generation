@@ -1,0 +1,26 @@
+# [build-system]
+# requires = ["hatchling"]
+# build-backend = "hatchling.build"
+
+[project]
+name = "path_generation"
+dynamic = ["version"]
+dependencies = [
+    "numpy"
+    ]
+requires-python = ">=3.8"
+authors = [
+    {name ="Kenneth Chan", email ="kenc0728@gmail.com"},
+    {name = "Pikachu Chan", email = "pikachu!@gmail.com"},
+]
+description = "Example"
+# license = "GPL-3.0-or-later"
+
+[project.scripts]
+path_generation-cli = "path_generation:main_cli"
+
+[project.optional-dependencies]
+developing_dependencies_INEEDTHEM = [
+    "black",
+    "ruff",
+]
