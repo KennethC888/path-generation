@@ -17,7 +17,7 @@ authors = [
     {name = "Pikachu Chan", email = "pikachu!@gmail.com"},
 ]
 description = "Example"
-# license = "GPL-3.0-or-later"
+license = "GPL-3.0-or-later"
 
 [project.scripts]
 path-generation-cli = "path_generation.__main__:main"
