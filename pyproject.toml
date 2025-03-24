@@ -1,0 +1,46 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = [
+  "hatch-vcs",
+  "hatchling",
+]
+
+[project]
+name = "path_generation"
+dynamic = ["version"]
+dependencies = [
+    "numpy"
+    ]
+requires-python = ">=3.8"
+authors = [
+    {name ="Kenneth Chan", email ="kenc0728@gmail.com"},
+    {name = "Pikachu Chan", email = "pikachu!@gmail.com"},
+]
+description = "Example"
+license = "GPL-3.0-or-later"
+
+[project.scripts]
+path-generation-cli = "path_generation.__main__:main"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "ruff",
+    "pre-commit",
+]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/path_generation/version.py"
+
+[tool.hatch.build]
+artifacts = [
+  "src/path_generation/version.py",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [
+  "src/path_generation",
+]
